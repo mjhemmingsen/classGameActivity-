@@ -124,18 +124,27 @@ def is_valid_move(row, col):
 
     # global variable game_board
 
+    global game_board
     # Check if  row or column is not a digit
+    if str(row).isdigit() == False or str(col).isdigit() == False:
         # return false
+        return False
 
     #elif check if row and col are not between 0 and 2
+    elif (row < 0 or row > 2) and (col < 0 or col > 2):
+        return False
 
         # return false
 
     # elif check if game_board[row][col] is not equal to '*':
+    elif game_board[row][col] != "*":
+        return False
 
         # return false
 
     # else
+    else:
+        return True
 
         # return true
 
@@ -212,12 +221,14 @@ def main():
 
     print(player_turn)
 
-main()
+    #is_valid_move()
+
+#main()
 
 
 
 if __name__ == '__main__':
     import doctest
 
-    doctest.run_docstring_examples(change_turn, globals())
+    doctest.run_docstring_examples(is_valid_move, globals())
 
