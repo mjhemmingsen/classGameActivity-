@@ -43,6 +43,7 @@ PRIORITY LEVEL 3
 
 game_board = []
 player_turn = 0 # X --> 0 and O--> 1
+game_over = False
 
 '''
 USAGE: Creates a 3 x 3 board that will store our values in a
@@ -101,9 +102,17 @@ USAGE:
 INPUT:
 OUTPUT:
 '''
-def make_move():
-    # TODO implement this method
-    pass
+def make_move(row,col):
+    # global game_game board
+    global game_board
+    # get player turn and store as variable 'move'
+    move = get_turn()
+    # change game_board[row][col] = 'move'
+    game_board[row][col] = move
+    # change player turn
+    change_turn()
+
+
 
 '''
 USAGE: Checks if the users move is valid or not
@@ -119,43 +128,57 @@ def is_valid_move(row, col):
     >>> game_board[2][2] = 'X'
     >>> is_valid_move(2,2)
     False
+    >>> is_valid_move('x',2323)
+    False
+    >>> is_valid_move(-1,3)
+    False
 
     '''
 
-    # global variable game_board
+
 
     global game_board
-    # Check if  row or column is not a digit
+
     if str(row).isdigit() == False or str(col).isdigit() == False:
-        # return false
+
         return False
 
-    #elif check if row and col are not between 0 and 2
+
     elif (row < 0 or row > 2) and (col < 0 or col > 2):
         return False
 
-        # return false
-
-    # elif check if game_board[row][col] is not equal to '*':
     elif game_board[row][col] != "*":
         return False
 
-        # return false
-
-    # else
     else:
         return True
 
-        # return true
+
 
 '''
-USAGE:
-INPUT:
-OUTPUT:
+USAGE: Ask the user for a row and a column
+INPUT: NONE
+OUTPUT: The row and column
 '''
 def get_user_move():
-    # TODO implement this method
-    pass
+
+    row = int(input("Enter a row between 0 and 2 >>> "))
+
+    col = int(input("Enter a column between 0 and 2 >>> "))
+
+    if is_valid_move(row,col) == True:
+
+
+        make_move(row,col)
+        display_board()
+    else:
+
+        get_user_move()
+
+
+
+
+
 
 '''
 USAGE: Get the current players move
@@ -200,35 +223,29 @@ def change_turn():
 
 
 
-def main():
-
-    global game_board
-
-    create_board()
-
-    display_board()
-
-    get_turn()
+#def main():
 
 
-    print(player_turn)
 
-    change_turn()
 
-    print(player_turn)
 
-    change_turn()
 
-    print(player_turn)
-
-    #is_valid_move()
 
 #main()
 
 
 
 if __name__ == '__main__':
-    import doctest
+    # import doctest
+    #
+    # doctest.run_docstring_examples(is_valid_move, globals())
+    global game_board
+    global game_over
 
-    doctest.run_docstring_examples(is_valid_move, globals())
+    create_board()
+
+    display_board()
+
+    while game_over == False:
+        get_user_move()
 
