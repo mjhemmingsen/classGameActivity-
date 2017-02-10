@@ -136,25 +136,36 @@ def get_turn():
 
     '''
     # Get global variable player_turn
+    global player_turn
 
+
+    if player_turn == 0:
+        return "X"
+    else:
+        return "O"
     # check if player_turn is equal to 0
 
         # Return x
 
     # Else
 
-        # Return y
+        # Return o
 
 
 
 
 '''
-USAGE:
-INPUT:
-OUTPUT:
+USAGE: Change from player 1 to player 2 with each turn
+INPUT: None - use global variable player_turn
+OUTPUT: None
 '''
 def change_turn():
-    # TODO implement this method
+    # Use global player_turn
+
+    # Create if statement to check whose turn it is
+
+        # If player_turn is equal to 0
+
     pass
 
 
@@ -166,7 +177,9 @@ def main():
 
     display_board()
 
-main()
+    get_turn()
+
+#main()
 
 
 
