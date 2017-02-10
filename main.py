@@ -155,20 +155,21 @@ OUTPUT: None
 '''
 def change_turn():
     # Use global player_turn
-
-
+    global player_turn
 
     # If player_turn is equal to 0
-
+    if player_turn == 0:
         # Change player_turn to 1
-
+        player_turn = 1
     # else if player_turn is equal to 1
-
+    elif player_turn == 1:
         # change player_turn to 0
+        player_turn = 0
     # else
         # print(some error message)
+    else:
+        print("error")
 
-    pass
 
 
 def main():
@@ -181,12 +182,23 @@ def main():
 
     get_turn()
 
-#main()
+
+    print(player_turn)
+
+    change_turn()
+
+    print(player_turn)
+
+    change_turn()
+
+    print(player_turn)
+
+main()
 
 
 
 if __name__ == '__main__':
     import doctest
 
-    doctest.run_docstring_examples(get_turn, globals())
+    doctest.run_docstring_examples(change_turn, globals())
 
