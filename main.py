@@ -106,13 +106,38 @@ def make_move():
     pass
 
 '''
-USAGE:
-INPUT:
-OUTPUT:
+USAGE: Checks if the users move is valid or not
+INPUT: A row and a col integer
+OUTPUT: True if valid False otherwise
 '''
-def is_valid_move():
-    # TODO implement this method
-    pass
+def is_valid_move(row, col):
+    '''
+    >>> global game_board
+    >>> create_board()
+    >>> is_valid_move(0,0)
+    True
+    >>> game_board[2][2] = 'X'
+    >>> is_valid_move(2,2)
+    False
+
+    '''
+
+    # global variable game_board
+
+    # Check if  row or column is not a digit
+        # return false
+
+    #elif check if row and col are not between 0 and 2
+
+        # return false
+
+    # elif check if game_board[row][col] is not equal to '*':
+
+        # return false
+
+    # else
+
+        # return true
 
 '''
 USAGE:
@@ -154,19 +179,13 @@ INPUT: None - use global variable player_turn
 OUTPUT: None
 '''
 def change_turn():
-    # Use global player_turn
+
     global player_turn
 
-    # If player_turn is equal to 0
     if player_turn == 0:
-        # Change player_turn to 1
         player_turn = 1
-    # else if player_turn is equal to 1
     elif player_turn == 1:
-        # change player_turn to 0
         player_turn = 0
-    # else
-        # print(some error message)
     else:
         print("error")
 
