@@ -135,7 +135,7 @@ def get_turn():
     'X'
 
     '''
-    # Get global variable player_turn
+
     global player_turn
 
 
@@ -143,13 +143,7 @@ def get_turn():
         return "X"
     else:
         return "O"
-    # check if player_turn is equal to 0
 
-        # Return x
-
-    # Else
-
-        # Return o
 
 
 
@@ -162,9 +156,17 @@ OUTPUT: None
 def change_turn():
     # Use global player_turn
 
-    # Create if statement to check whose turn it is
 
-        # If player_turn is equal to 0
+
+    # If player_turn is equal to 0
+
+        # Change player_turn to 1
+
+    # else if player_turn is equal to 1
+
+        # change player_turn to 0
+    # else
+        # print(some error message)
 
     pass
 
