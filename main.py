@@ -43,7 +43,7 @@ PRIORITY LEVEL 3
 
 game_board = []
 player_turn = 0 # X --> 0 and O--> 1
-game_over = False
+
 
 '''
 USAGE: Creates a 3 x 3 board that will store our values in a
@@ -239,8 +239,8 @@ if __name__ == '__main__':
     # import doctest
     #
     # doctest.run_docstring_examples(is_valid_move, globals())
-    global game_board
-    global game_over
+
+    game_over = False
 
     create_board()
 
