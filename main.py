@@ -42,7 +42,7 @@ PRIORITY LEVEL 3
 '''
 
 game_board = []
-player_turn = 0
+player_turn = 0 # X --> 0 and O--> 1
 
 '''
 USAGE: Creates a 3 x 3 board that will store our values in a
@@ -124,11 +124,36 @@ def get_user_move():
     pass
 
 '''
+USAGE: Get the current players move
+INPUT: NONE use player_turn global variable
+OUTPUT: return either x or o
+'''
+def get_turn():
+    '''
+    >>> global player_turn
+    >>> get_turn()
+    'X'
+
+    '''
+    # Get global variable player_turn
+
+    # check if player_turn is equal to 0
+
+        # Return x
+
+    # Else
+
+        # Return y
+
+
+
+
+'''
 USAGE:
 INPUT:
 OUTPUT:
 '''
-def get_turn():
+def change_turn():
     # TODO implement this method
     pass
 
@@ -142,4 +167,11 @@ def main():
     display_board()
 
 main()
+
+
+
+if __name__ == '__main__':
+    import doctest
+
+    doctest.run_docstring_examples(get_turn, globals())
 
