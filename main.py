@@ -225,7 +225,17 @@ OUTPUT: TRUE if full, False OTHERWISE
 '''
 def is_board_filled():
 
+    # Get global game_board, game_over
+
+    # Loop over rows
+        #Loop over columns
+            # spot = current spot on board
+            # Check if spot is equal to '*'
+                # return False
+    # return True
     pass
+
+
 
 
 def main():
@@ -236,11 +246,19 @@ def main():
 
     display_board()
 
+
+
+
+
+
+
     while game_over == False:
         get_user_move()
 
 
 main()
+
+
 
 
 
