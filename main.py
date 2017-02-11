@@ -257,8 +257,11 @@ def main():
 
 
 
-    while game_over == False:
+
+
+    while is_board_filled() == False:
         get_user_move()
+
 
 
 main()
