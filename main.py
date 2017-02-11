@@ -225,15 +225,22 @@ OUTPUT: TRUE if full, False OTHERWISE
 '''
 def is_board_filled():
 
-    # Get global game_board, game_over
 
+    # Get global game_board, game_over
+    global game_board
+    global game_over
     # Loop over rows
+    for i in range(0,3):
         #Loop over columns
+        for j in range(0,3):
+            spot = game_board[i][j]
             # spot = current spot on board
+            if spot == "*":
             # Check if spot is equal to '*'
+                return False
                 # return False
+    return True
     # return True
-    pass
 
 
 
@@ -241,9 +248,7 @@ def is_board_filled():
 def main():
 
     global game_over
-
     create_board()
-
     display_board()
 
 
