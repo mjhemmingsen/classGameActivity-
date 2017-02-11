@@ -43,6 +43,7 @@ PRIORITY LEVEL 3
 
 game_board = []
 player_turn = 0 # X --> 0 and O--> 1
+game_over = False
 
 
 '''
@@ -97,11 +98,6 @@ def display_board():
 
 
 
-'''
-USAGE:
-INPUT:
-OUTPUT:
-'''
 def make_move(row,col):
     # global game_game board
     global game_board
@@ -221,9 +217,20 @@ def change_turn():
     else:
         print("error")
 
+'''
+USAGE: Checks if the board is filled
+INPUT: NONE
+GLOBAL: game_board, game_over
+OUTPUT: TRUE if full, False OTHERWISE
+'''
+def is_board_filled():
+
+    pass
+
 
 def main():
-    game_over = False
+
+    global game_over
 
     create_board()
 
