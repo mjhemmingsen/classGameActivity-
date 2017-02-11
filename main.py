@@ -108,7 +108,7 @@ def make_move(row,col):
     # get player turn and store as variable 'move'
     move = get_turn()
     # change game_board[row][col] = 'move'
-    game_board[row][col] = move
+    game_board[int(row)][int(col)] = move
     # change player turn
     change_turn()
 
@@ -144,10 +144,10 @@ def is_valid_move(row, col):
         return False
 
 
-    elif (row < 0 or row > 2) and (col < 0 or col > 2):
+    elif (int(row) < 0 or int(row) > 2) or (int(col) < 0 or int(col) > 2):
         return False
 
-    elif game_board[row][col] != "*":
+    elif game_board[int(row)][int(col)] != "*":
         return False
 
     else:
@@ -162,9 +162,9 @@ OUTPUT: The row and column
 '''
 def get_user_move():
 
-    row = int(input("Enter a row between 0 and 2 >>> "))
+    row = input("Enter a row between 0 and 2 >>> ")
 
-    col = int(input("Enter a column between 0 and 2 >>> "))
+    col = input("Enter a column between 0 and 2 >>> ")
 
     if is_valid_move(row,col) == True:
 
