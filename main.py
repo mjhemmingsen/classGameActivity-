@@ -222,24 +222,7 @@ def change_turn():
         print("error")
 
 
-
-#def main():
-
-
-
-
-
-
-
-#main()
-
-
-
-if __name__ == '__main__':
-    # import doctest
-    #
-    # doctest.run_docstring_examples(is_valid_move, globals())
-
+def main():
     game_over = False
 
     create_board()
@@ -248,4 +231,15 @@ if __name__ == '__main__':
 
     while game_over == False:
         get_user_move()
+
+
+main()
+
+
+
+#if __name__ == '__main__':
+    # import doctest
+    #
+    # doctest.run_docstring_examples(is_valid_move, globals())
+
 
