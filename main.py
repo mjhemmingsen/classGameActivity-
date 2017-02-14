@@ -224,11 +224,21 @@ GLOBAL: game_board, game_over
 OUTPUT: TRUE if full, False OTHERWISE
 '''
 def is_board_filled():
+    '''
+    >>> global game_board
+    >>> create_board()
+    >>> is_board_filled()
+    False
+    >>> fill_board()
+    >>> is_board_filled()
+    True
 
+
+    '''
 
     # Get global game_board, game_over
     global game_board
-    global game_over
+
     # Loop over rows
     for i in range(0,3):
         #Loop over columns
@@ -243,36 +253,45 @@ def is_board_filled():
     # return True
 
 
-
-
-def main():
-
-    global game_over
-    create_board()
-    display_board()
-
-
-
+'''
+USAGE:
+INPUT:
+OUTPUT:
+'''
+def fill_board():
+    pass
 
 
 
 
+# def main():
+#
+#     global game_over
+#     create_board()
+#     display_board()
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#     while is_board_filled() == False:
+#         get_user_move()
+#
+#
+#
+# main()
 
 
-    while is_board_filled() == False:
-        get_user_move()
 
 
 
-main()
+if __name__ == '__main__':
+    import doctest
 
-
-
-
-
-#if __name__ == '__main__':
-    # import doctest
-    #
-    # doctest.run_docstring_examples(is_valid_move, globals())
+    doctest.run_docstring_examples(is_board_filled(), globals())
 
 
