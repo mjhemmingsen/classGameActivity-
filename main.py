@@ -279,7 +279,15 @@ OUTPUT:
 def clear_board():
     global game_board
 
-    pass
+    # global game_board
+    global game_board
+    # loop over rows 0 to 3
+    for i in range(0, 3):
+        # loop over columns 0 to 3
+        for j in range(0, 3):
+            # set game_board[i][j] = 'X'
+            game_board[i][j] = '*'
+
 
 def is_horizontal_win():
     '''
@@ -307,7 +315,20 @@ def is_horizontal_win():
 
 
     '''
-    pass
+
+    if "O" == game_board[0][0] and "O" == game_board[0][1] and "O" == game_board[0][2]:
+        return True
+    elif "X" == game_board[0][0] and "X" == game_board[0][1] and "X" == game_board[0][2]:
+        return True
+    elif "O" == game_board[1][0] and "O" == game_board[1][1] and "O" == game_board[1][2]:
+        return True
+    elif "X" == game_board[1][0] and "X" == game_board[1][1] and "X" == game_board[1][2]:
+        return True
+    elif "O" == game_board[2][0] and "O" == game_board[2][1] and "O " == game_board[2][2]:
+        return True
+    elif "X" == game_board[2][0] and "X" == game_board[2][1] and "X" == game_board[2][2]:
+        return True
+    return False
 
 
 
