@@ -272,8 +272,33 @@ def fill_board():
 
 
 
+def is_horizontal_win():
+    '''
+    >>> global game_board
+    >>> create_board()
+    >>> game_board[0][0] = game_board[0][1] = game_board[0][2]  = 'X'
+
+    >>> is_horizontal_win()
+    True
+
+    >>> create_board()
+
+    >>> game_board[1][0] = game_board[1][1] = game_board[1][2]  = 'O'
+
+    >>> is_horizontal_win()
+    True
+
+    >>> create_board()
+
+    >>> game_board[1][0] = game_board[1][1]  = 'O'
+    >>> game_board[1][2] = 'X'
+
+    >>> is_horizontal_win()
+    False
 
 
+    '''
+    pass
 
 
 
@@ -306,6 +331,6 @@ def fill_board():
 if __name__ == '__main__':
     import doctest
 
-    doctest.run_docstring_examples(is_board_filled, globals())
+    doctest.run_docstring_examples(is_horizontal_win, globals())
 
 
