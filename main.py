@@ -260,13 +260,18 @@ GLOBAL: game_board
 OUTPUT: NONE
 '''
 def fill_board():
+
     # global game_board
+    global game_board
     # loop over rows 0 to 3
+    for i in range(0, 3):
         # loop over columns 0 to 3
+        for j in range(0, 3):
             # set game_board[i][j] = 'X'
+            game_board[i][j] = 'X'
 
 
-    pass
+
 
 
 
@@ -288,6 +293,7 @@ def fill_board():
 #
 #     while is_board_filled() == False:
 #         get_user_move()
+
 #
 #
 #
@@ -300,6 +306,6 @@ def fill_board():
 if __name__ == '__main__':
     import doctest
 
-    doctest.run_docstring_examples(is_board_filled(), globals())
+    doctest.run_docstring_examples(is_board_filled, globals())
 
 
