@@ -290,18 +290,18 @@ def is_horizontal_win():
     >>> is_horizontal_win()
     True
 
-    >>> create_board()
+    >>> clear_board()
 
     >>> game_board[1][0] = game_board[1][1] = game_board[1][2]  = 'O'
 
     >>> is_horizontal_win()
     True
 
-    >>> create_board()
+    >>> clear_board()
 
     >>> game_board[1][0] = game_board[1][1]  = 'O'
     >>> game_board[1][2] = 'X'
-    >>> print(game_board)
+
     >>> is_horizontal_win()
     False
 
