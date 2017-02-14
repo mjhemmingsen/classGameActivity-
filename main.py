@@ -254,12 +254,20 @@ def is_board_filled():
 
 
 '''
-USAGE:
-INPUT:
-OUTPUT:
+USAGE: Creating a filled board to check is_board_filled function
+INPUT: NONE
+GLOBAL: game_board
+OUTPUT: NONE
 '''
 def fill_board():
+    # global game_board
+    # loop over rows 0 to 3
+        # loop over columns 0 to 3
+            # set game_board[i][j] = 'X'
+
+
     pass
+
 
 
 
