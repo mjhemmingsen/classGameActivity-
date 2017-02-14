@@ -270,7 +270,16 @@ def fill_board():
             # set game_board[i][j] = 'X'
             game_board[i][j] = 'X'
 
+'''
+USAGE:
+INPUT:
+GLOBAL:
+OUTPUT:
+'''
+def clear_board():
+    global game_board
 
+    pass
 
 def is_horizontal_win():
     '''
@@ -292,7 +301,7 @@ def is_horizontal_win():
 
     >>> game_board[1][0] = game_board[1][1]  = 'O'
     >>> game_board[1][2] = 'X'
-
+    >>> print(game_board)
     >>> is_horizontal_win()
     False
 
