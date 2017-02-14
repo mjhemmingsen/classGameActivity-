@@ -316,19 +316,7 @@ def is_horizontal_win():
 
     '''
 
-    if "O" == game_board[0][0] and "O" == game_board[0][1] and "O" == game_board[0][2]:
-        return True
-    elif "X" == game_board[0][0] and "X" == game_board[0][1] and "X" == game_board[0][2]:
-        return True
-    elif "O" == game_board[1][0] and "O" == game_board[1][1] and "O" == game_board[1][2]:
-        return True
-    elif "X" == game_board[1][0] and "X" == game_board[1][1] and "X" == game_board[1][2]:
-        return True
-    elif "O" == game_board[2][0] and "O" == game_board[2][1] and "O " == game_board[2][2]:
-        return True
-    elif "X" == game_board[2][0] and "X" == game_board[2][1] and "X" == game_board[2][2]:
-        return True
-    return False
+
 
 
 
