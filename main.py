@@ -315,8 +315,32 @@ def is_horizontal_win():
 
 
     '''
+    global game_board
 
-    pass
+    # [
+    #
+    # [X, O, X] --> list1
+    #
+    # [O, O, X] --> list2
+    #
+    # [X, O, X] --> list3 --> This will win
+    #
+    #  Values row takes on --> 0, 1, 2
+    #
+    # ]
+
+
+
+    for row in game_board:
+
+        if row[0] == row[1] == row[2] == 'X':
+            return True
+
+        elif row[0] == row[1] == row[2] == 'O':
+            return True
+    return False
+
+
 
 
 
@@ -349,6 +373,63 @@ def is_vertical_win():
 
     pass
 
+'''
+CHECKS IF THE BOARD HAS A FORWARD DIAGONAL WIN EXAMPLE BELOW
+
+        - - X
+        - X -
+        X - -
+
+'''
+def is_forward_diagonal_win():
+    '''
+     >>> global game_board
+     >>> create_board()
+     >>> game_board[0][2] = game_board[1][1] = game_board[2][0]  = 'X'
+
+     >>> is_forward_diagonal_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[1][1] = game_board[2][0]  = 'X'
+     >>> is_forward_diagonal_win()
+     False
+
+    '''
+
+    pass
+
+
+
+'''
+CHECKS IF THE BOARD HAS A BACKWARD DIAGONAL WIN EXAMPLE BELOW
+
+        X - -
+        - X -
+        - - X
+
+'''
+def is_backward_diagonal_win():
+
+    '''
+     >>> global game_board
+     >>> create_board()
+     >>> game_board[0][0] = game_board[1][1] = game_board[2][2]  = 'X'
+
+     >>> is_backward_diagonal_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[1][1] = game_board[2][0]  = 'X'
+     >>> is_backward_diagonal_win()
+     False
+
+    '''
+    pass
+
+
 
 def is_diagonal_win():
     '''
@@ -376,7 +457,11 @@ def is_diagonal_win():
 
 
     '''
-    pass
+    global game_board
+    if is_forward_diagonal_win() or is_backward_diagonal_win():
+        return True
+    else:
+        return False
 
 
 
@@ -456,10 +541,16 @@ def is_win():
 if __name__ == '__main__':
     import doctest
 
-    doctest.run_docstring_examples(is_horizontal_win, globals())
+    #doctest.run_docstring_examples(is_horizontal_win, globals())
 
     # UNCOMMENT TO RUN IS THE DOC-TEST FOR VERITCAL WIN CONDITIONS
     #doctest.run_docstring_examples(is_vertical_win, globals())
+
+    # UNCOMMENT TO RUN IS THE DOC-TEST FOR is_backward_diagonal_win
+    #doctest.run_docstring_examples(is_backward_diagonal_win, globals())
+
+    # UNCOMMENT TO RUN IS THE DOC-TEST FOR is_forward_diagonal_win
+    #doctest.run_docstring_examples(is_forward_diagonal_win, globals())
 
     # UNCOMMENT TO RUN IS THE DOC-TEST FOR DIAGONAL WIN CONDITIONS
     # doctest.run_docstring_examples(is_diagonal_win, globals())
