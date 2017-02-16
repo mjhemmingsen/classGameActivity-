@@ -413,6 +413,8 @@ def is_win():
 
      >>> game_board[0][0] = game_board[0][1] = game_board[1][2] = game_board[2][0] = game_board[2][1]   = 'X'
      >>> game_board[0][2] = game_board[1][0] = game_board[1][1] = game_board[2][2] = 'O'
+
+     >>> is_win()
      False
 
 
