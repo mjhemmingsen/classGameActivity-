@@ -316,6 +316,71 @@ def is_horizontal_win():
 
     '''
 
+    pass
+
+
+
+def is_vertical_win():
+    '''
+     >>> global game_board
+     >>> create_board()
+     >>> game_board[0][0] = game_board[1][0] = game_board[2][0]  = 'X'
+
+     >>> is_vertical_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[1][0] = game_board[2][0]  = 'O'
+
+     >>> is_vertical_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[1][0] = game_board[1][1]  = 'O'
+     >>> game_board[1][2] = 'X'
+
+     >>> is_vertical_win()
+     False
+
+
+     '''
+
+    pass
+
+
+def is_diagonal_win():
+    '''
+     >>> global game_board
+     >>> create_board()
+     >>> game_board[0][0] = game_board[1][1] = game_board[2][2]  = 'X'
+
+     >>> is_diagonal_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[2][0] = game_board[1][1] = game_board[0][2]  = 'O'
+
+     >>> is_diagonal_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[1][1]  = 'O'
+     >>> game_board[2][2] = 'X'
+
+     >>> is_diagonal_win()
+     False
+
+
+    '''
+    pass
+
+
+
+
 
 
 
@@ -351,4 +416,8 @@ if __name__ == '__main__':
 
     doctest.run_docstring_examples(is_horizontal_win, globals())
 
+    # UNCOMMENT TO RUN IS THE DOC-TEST FOR VERITCAL WIN CONDITIONS
+    #doctest.run_docstring_examples(is_vertical_win, globals())
 
+    # UNCOMMENT TO RUN IS THE DOC-TEST FOR DIAGONAL WIN CONDITIONS
+    # doctest.run_docstring_examples(is_diagonal_win, globals())
