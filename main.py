@@ -380,7 +380,47 @@ def is_diagonal_win():
 
 
 
+'''
+USAGE: Checks if either of our 3 win conditons are met
+GLOBALS: game_board
+INPUT: None --> Uses global variables...See above
+OUTPUT: returns True if any win condition is met, False otherwise
+'''
+def is_win():
+    '''
+     >>> global game_board
+     >>> create_board()
+     >>> game_board[0][0] = game_board[1][1] = game_board[2][2]  = 'X'
 
+     >>> is_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[1][0] = game_board[2][0]  = 'X'
+
+     >>> is_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[0][1] = game_board[0][2]  = 'X'
+
+     >>> is_win()
+     True
+
+     >>> clear_board()
+
+     >>> game_board[0][0] = game_board[0][1] = game_board[1][2] = game_board[2][0] = game_board[2][1]   = 'X'
+     >>> game_board[0][2] = game_board[1][0] = game_board[1][1] = game_board[2][2] = 'O'
+     False
+
+
+
+
+    '''
+
+    pass
 
 
 
@@ -421,3 +461,6 @@ if __name__ == '__main__':
 
     # UNCOMMENT TO RUN IS THE DOC-TEST FOR DIAGONAL WIN CONDITIONS
     # doctest.run_docstring_examples(is_diagonal_win, globals())
+
+    # UNCOMMENT TO RUN IS THE DOC-TEST FOR is_win() function
+    # doctest.run_docstring_examples(is_win, globals())
